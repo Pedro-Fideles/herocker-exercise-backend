@@ -10,6 +10,8 @@ app.use(cors());
 
 app.get('/users', rescue(UserController));
 
+app.get('/ping', (_req, res) => res.json('pong'));
+
 app.use(errorMiddleware); 
 
 module.exports = app;
